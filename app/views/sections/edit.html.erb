@@ -1,0 +1,18 @@
+<%= link_to("<< Back to List", sections_path, :class => 'back-link') %>
+
+<div class="sections edit">
+  <h2>Update Section</h2>
+
+  <%= form_for(@section) do |f| %>
+
+  <!-- The above table is replaced by below code -->
+  <!-- the next render sends/connects to to _form.html.erb -->
+  <!-- f.text in _form.html.erb also define below -->
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= f.submit("Update Section") %>
+    </div>
+
+  <% end %>
+</div>

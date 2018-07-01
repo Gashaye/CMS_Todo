@@ -1,0 +1,32 @@
+<%= link_to("<< Back to List", subjects_path, :class => 'back-link') %>
+
+<div class="subjects new">
+  <h2>Create Subject</h2>
+
+  <%= form_for(@subject) do |f| %>
+
+    <!-- <table summary="Subject form fields">
+      <tr>
+        <th>Name</th>
+        <td><%= f.text_field(:name) %></td>
+      </tr>
+      <tr>
+        <th>Position</th>
+        <td><%= f.text_field(:position) %></td>
+      </tr>
+      <tr>
+        <th>Visible</th>
+        <td><%= f.text_field(:visible) %></td>
+      </tr>
+    </table> -->
+    <!-- The above table is replaced by below code -->
+    <!-- the next render sends/connects to to _form.html.erb -->
+    <!-- f.text in _form.html.erb also define below -->
+  <%= render(:partial => 'form', :locals => {:f => f}) %>
+
+    <div class="form-buttons">
+      <%= f.submit("Create Subject") %>
+    </div>
+
+  <% end %>
+</div>
