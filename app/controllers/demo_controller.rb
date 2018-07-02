@@ -1,6 +1,6 @@
 class DemoController < ApplicationController
 
-  layout 'application'
+  layout 'admin'
 
   def index
     render('index')

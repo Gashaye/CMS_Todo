@@ -1,12 +1,12 @@
 class PagesController < ApplicationController
 
-  layout 'admin'
+  layout 'application'
   # before_action below is used for all CRUD; and
   # initiated and defined at the end of the code by: def find_subjects
   # that meands for :new, :create, :edit, :update only
 
-  before_action :find_subjects :only => [:new, :create, :edit, :update]
-  before_action :set_page_count,:only =>[:new, :create, :edit, :update]
+  before_action :find_subjects, :only => [:new, :create, :edit, :update]
+  before_action :set_page_count, :only => [:new, :create, :edit, :update]
   def index
     @pages = Page.sorted
   end
@@ -76,6 +76,7 @@ class PagesController < ApplicationController
     @page_count = Page.count
     if params[:action] == 'new' || params[:action] == 'create'
       @page_count += 1
+    end
   end
 
 end

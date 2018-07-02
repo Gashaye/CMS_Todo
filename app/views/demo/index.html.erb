@@ -1,5 +1,26 @@
-<h1>Hello world from index!</h1>
+<!-- <div class="topnav">
+  <a href="/demo/index">Home</a>
+  <a href="/subjects">Subjects</a>
+  <a href="/pages">Pages</a>
+  <a href="/sections">Sections</a>
+</div> -->
 
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="topnav" id="myTopnav">
+  <a href="/demo/index" class="active">Demo</a>
+  <a href="/subjects">Subjects</a>
+  <a href="/pages">Pages</a>
+  <a href="/sections">Sections</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<h1>Please add, edit or update the contents below!</h1>
+
+<a href="/subjects">All Subjects</a><br />
 <a href="/demo/hello">Hello page 1</a><br />
 <%= link_to('Hello page 2', {:action => 'hello'}) %><br />
 

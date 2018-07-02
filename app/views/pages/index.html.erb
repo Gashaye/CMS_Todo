@@ -1,8 +1,18 @@
+<div class="topnav" id="myTopnav">
+  <a href="/pages" class="active">Pages</a>
+  <a href="/demo/index">Demo</a>
+  <a href="/subjects">Subjects</a>
+  <a href="/sections">Sections</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
 
 <div class="pages index">
   <h2>Pages</h2>
 
   <%= link_to("Add New Page", new_page_path, :class => 'action new') %>
+  
 
   <table class="listing" summary="Page list">
     <tr class="header">
