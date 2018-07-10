@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
 
-  layout 'application'
+  # The default layout 'application' is changed to admin
+  layout 'admin'
   # before_action below is used for all CRUD; and
   # initiated and defined at the end of the code by: def find_subjects
   # that meands for :new, :create, :edit, :update only
